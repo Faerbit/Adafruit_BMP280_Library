@@ -30,7 +30,7 @@
  */
 Adafruit_BMP280::Adafruit_BMP280(TwoWire *theWire)
     : _cs(-1), _mosi(-1), _miso(-1), _sck(-1) {
-  *_wire = *theWire;
+  _wire = theWire;
 }
 
 /*!
@@ -42,7 +42,7 @@ Adafruit_BMP280::Adafruit_BMP280(TwoWire *theWire)
  */
 Adafruit_BMP280::Adafruit_BMP280(int8_t cspin, SPIClass *theSPI)
     : _cs(cspin), _mosi(-1), _miso(-1), _sck(-1) {
-  *_spi = *theSPI;
+  _spi = theSPI;
 }
 
 /*!
